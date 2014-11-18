@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.PopupMenu;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -25,11 +26,26 @@ class MoneyCalculatorFrame extends JFrame {
 
     private JPanel createExchangeDialog() {
         JPanel panel = new JPanel(new FlowLayout());
+        panel.add(new MoneyDialog());
+        panel.add(new CurrencyDialog());
         return panel;
     }
 
     private JPanel createToolbar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        JPanel toolBar = new JPanel(new FlowLayout (FlowLayout.RIGHT));
+        add(createCalculateButton());
+        add(createCancelButton());
+        return toolBar;
+    }
+
+    private JButton createCalculateButton() {
+        JButton button = new JButton("Calculate");
+        return button;
+    }
+
+    private JButton createCancelButton() {
+        JButton button = new JButton("Close");
+        return button;
     }
     
     
