@@ -47,7 +47,7 @@ class MoneyCalculatorFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Calculating...");
-            }
+            } 
         });
         return button;
     }
