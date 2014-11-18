@@ -33,8 +33,8 @@ class MoneyCalculatorFrame extends JFrame {
 
     private JPanel createToolbar() {
         JPanel toolBar = new JPanel(new FlowLayout (FlowLayout.RIGHT));
-        add(createCalculateButton());
-        add(createCancelButton());
+        toolBar.add(createCalculateButton());
+        toolBar.add(createCancelButton());
         return toolBar;
     }
 
